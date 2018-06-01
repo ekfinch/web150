@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Play', sans-serif;
+}
+
+#faqs {
+    box-sizing: border-box;
+    width: 570px;
+    height: 270px;
+    border: 3px solid #424dce; 
+}
+
+ul {
+    position: relative;
+    padding-top: 2em;
+    right: -900px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #424dce;
+}
+
+li {
+    list-style: none;
+}
+
+ul a {
+    font-size: 16px;
+}
