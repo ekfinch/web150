@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Calculate MPG</title>
+        <link rel="stylesheet" href="css/a7.css" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300" rel="stylesheet">
+    </head>
+    <body>
+        <div id="page">
+            <h1>How many miles per gallon does your car use?</h1>
+            <section>
+                <label for="miles">Enter miles driven: </label>
+                <input type="text" id="miles" /><br />
+                <label for="fuel">Enter gallons of gas used: </label>
+                <input type="text" id="fuel" /><br />
+                <label for="mpg">Miles Per Gallon: </label>
+                <input type="text" id="mpg" disabled="disabled" />
+                <br /><br />
+                <input type="button" id="calculate" value="Calculate MPG"><br />
+                <div id="feedback"></div>
+            </section>
+        </div>
+    <script>
+        
+        //use the .onload property to handle multiple events as the page loads
+        window.onload = function () {
+            //the .onclick property will return the calculated MPG's
+            $("calculate").onclick = calculateMpg;
+            //set the focus on miles driven
+            $("miles").focus();
+        }
+        
+        var $ = function (id) {
+            return document.getElementById(id);
+        }
+        
+        var calculateMpg = function () {
+            //use the parseFloat() function to parse an argument and return a floating point number
+            var miles = parseFloat($("miles").value);
+            var fuel = parseFloat($("fuel").value);
+            
+            //if user enters in anything but a numeral in the entry fields, the user will get an alert instructing them to enter a numeric value
+            //NaN = Not a number
+            if (isNaN(miles) || isNaN(fuel)) {
+                var elMsg = document.getElementById("feedback");
+                alert("Both entries must be numeric");
+            }
+            else {
+                var mpg = miles / fuel;
+                //use the value property to return the value of mpg's 
+                $("mpg").value = mpg.toFixed(0);//number of digits to appear after the decimal point
+            }
+        }
+        
+    </script>
+    </body>
+</html>

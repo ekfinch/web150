@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A8 - jQuery Animation</title>
+        <link rel="stylesheet" href="css/a8.css">
+    </head>
+    <body>
+        <div id="page">
+            <ul id="faqs">
+                <h1>jQuery FAQs</h1>
+                <li>What is jQuery?</li>
+                <li>Why is jQuery becoming so popular?</li>
+                <li>Which is harder to learn: jQuery or JavaScript?</li>
+                <a href="https://api.jqueryui.com/easings/">Review jQuery UI easings in a new tab or window</a>
+            </ul>
+        </div>
+   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+             $(document).ready(function() {
+                $('h1').hide();//hides h1 until page loads
+                var $h1 = $('h1');
+                $h1.hide().each(function(index){
+                    $(this).delay(5000 * index).fadeIn(6000);//controls the delay and speed of h1 fade-in
+                });
+                $('a').hide();//hides <a> tag link until page loads
+                var $a = $('a');
+                $a.hide().each(function(index){
+                    $(this).delay(5000 * index).fadeIn(6000);//controls the delay and speed of <a> tag fade-in
+                }); 
+                $("#page").ready(function(){//animates faqs when the dom is fully loaded
+                    $("#faqs").animate({
+                        left: "500",
+                        fontSize: "18pt",
+                        width: "650"
+                    }, 2500, "swing");//set the speed of transition, and use the swing easing function to implement the transition
+                });
+             });
+        </script>    
+    </body>
+</html>

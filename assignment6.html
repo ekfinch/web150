@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web 150 - A6</title>
+        <link rel="stylesheet" href="css/a6.css">
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono|Roboto+Mono" rel="stylesheet">
+    </head>
+    <body>
+        <div id="page">
+            <img class="spaceman" src="images/major-tom.png" alt="Major Tom" />
+            <h1>- Daily Space Flights -</h1>
+            <h2>"Make your next holiday out of this world!"</h2>
+            <ul>
+                <li id="one" class="nebula">Jupiter</li>
+                <li id="two" class="starman">Mars</li>
+                <li id="three" class="nebula">Mercury</li>
+                <li id="four"class="starman">Saturn</li>
+                <li id="five"class="nebula">Venus</li>
+            </ul>
+            <img class="ship" src="images/rocket.png" alt="Rocket Ship" />
+            <footer>
+                <small>&copy; 2018, Erica Finch, All Rights Reserved</small>
+            </footer>
+        </div>
+        
+        <script>//four methods covered in chapter 5 for assignment 6
+            
+            //1. Adding An Element
+            //create a new element in list of planets
+            var newEl = document.createElement('li');
+            //create a text node
+            var newText = document.createTextNode('Uranus');
+            //attatch the new text node to the new element
+            newEl.appendChild(newText);
+            
+            //find the position to insert the new element
+            var position = document.getElementsByTagName('ul')[0];
+            
+            //insert the new element into its position
+            position.appendChild(newEl);
+        
+            
+            //2. Setting An Attribute
+            
+            //use className to insert adventure rocket icon into the fourth list item, Saturn
+            var firstItem = document.getElementById('four');
+            firstItem.className = 'adventure';
+            
+            //use setAttribute to change the class which will change the background color of list item from grey to orange- with the class of starman
+            var fourthItem = document.getElementsByTagName('li').item(4);
+            fourthItem.setAttribute('class', 'starman');
+            
+            
+            //3. Node Value
+            
+            //select the first list item, Jupiter
+            var itemOne = document.getElementById('one');
+            //get the text content of the node
+            var elText = itemOne.firstChild.nodeValue;
+            //replace Jupiter to Neptune
+            elText = elText.replace('Jupiter', 'Neptune');
+            //update the list item
+            itemOne.firstChild.nodeValue = elText;
+            
+            
+            //4. Getting An Element By Class Name
+            
+            //find the items with the class of nebula
+            var elements = document.getElementsByClassName('nebula');
+            //if 3 or more items are found in NodeList
+            if(elements.length > 1){
+                //select the third item from the list, Mercury
+                var el = elements[1];
+                //change the value to the class of starman, or orange, by using the className attribute
+                el.className = 'starman';
+            }
+            
+          </script>
+    </body>
+</html>
