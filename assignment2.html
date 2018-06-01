@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="content">
+            <p id="add"></p>
+        </div>
+        <script>
+            //prompt user for input
+            var userName = prompt("Let's play the sum game. Please enter your name");
+            //prompt user for two numbers to add
+            //use parseInt to return the two numbers
+            var num1 = parseInt(prompt("Enter first number"));
+            
+            var num2 = parseInt(prompt("Enter second number"));
+            
+            var result = num1 + num2;
+            
+            var text1 = 'Hi, ';
+            var text2 = '! The sum of ';
+            var text3 = ' + ';
+            var text4 = ' is ';
+            //use concat()method to join two or more strings
+            var text5 = text1.concat(userName, text2, num1, text3, num2, text4, result);
+        
+            //get the element with the id of add
+            document.getElementById("add").innerHTML = text5;
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grade Converter</title>
+    </head>
+    <body>
+        <script> 
+            
+            //prompt user to enter a number grade
+            var grade = prompt('Enter a number to check your letter grade');
+            
+            //use if and else if statements to determine letter grade
+            if (grade <= 60) {
+                alert ('Number grade = ' + grade + ' Letter grade = F');
+            } else if (grade <= 67) {
+                alert ('Number grade = ' + grade + ' Letter grade = D');
+            } else if (grade <= 79) {
+                alert ('Number grade = ' + grade + ' Letter grade = C');
+            } else if (grade <= 87) {
+                alert ('Number grade = ' + grade + ' Letter grade = B');
+            } else if (grade <= 100) {
+                alert ('Number grade = ' + grade + ' Letter grade = A');
+            } else if (grade <= 999) {
+                alert ('goodbye');    
+            }
+          
+        </script>       
+    </body>
+</html>

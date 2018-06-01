@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Average Test Scores</title>
+    </head>
+    <body>
+        <script> 
+            
+            var score = [];
+            //prompt user to input test scores
+            //use while loop to create conditional for 999 to end entries
+            function getScores() {
+                var entry = prompt('Enter test score\nOr enter 999 to end entries');
+                while (entry != 999) { 
+                    score.push(parseInt(entry));
+                    entry = prompt('Enter test score\nOr enter 999 to end entries');
+            }
+}
+
+            function calculate() {
+                var total = 0;
+                for (var i = 0; i < score.length; i++) {
+                    total += score[i];    
+             
+            }
+                    average = (total / score.length).toFixed(0); //set number to 0 to eliminate decimal
+}
+
+            function showScores() {
+                    alert('Average score is: ' + average);//shows user avg score
+}
+
+            getScores();
+            calculate();
+            showScores()
+            
+        </script>       
+    </body>
+</html>
