@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #E5E4E2;
+    font-family: 'Roboto Mono';
+}
+
+.logo {
+    width: 35%;
+    float: right;
+}
+
+h2 {
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    color: #000;
+}
+
+.cmxform {
+    margin-top: 15em;
+    margin-left: 15em;
+    width: 40%;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: .75em;
+}

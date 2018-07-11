@@ -1,0 +1,39 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: #E5E4E2;
+  font-family: 'Roboto';
+}
+
+.logo {
+    width: 35%;
+    float: right;
+    padding-top: 1em;
+}
+
+.ui-widget {
+    padding-left: 200px;
+    padding-top: 100px;
+    font-family: 'Roboto Mono';
+}
+
+.trails {
+    width: 16%;
+    padding-top: 200px;
+    padding-left: 200px;
+    padding-bottom: 5em;
+}
+
+#confirmation {
+    font-family: 'Roboto Mono';
+    padding-top: 180px;
+    padding-left: 250px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: .75em;
+    font-family: 'Roboto Mono';
+}

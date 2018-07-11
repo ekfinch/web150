@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web 150 - Final Project</title>
+        <link rel="stylesheet" href="css/fp.css">
+        <link rel="stylesheet" href="css/side-nav.css">
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono|Roboto+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+        //autocomplete jQuery UI widget    
+        $(document).ready(function() {
+            var availableTags = [
+                "Altra",
+                "Arc'teryx",
+                "Black Diamond",
+                "Brooks",
+                "Feetures",    
+                "Garmin",    
+                "Hoka",        
+                "Icebreaker",
+                "Injinji",  
+                "Julbo",    
+                "La Sportiva",
+                "Leki",
+                "Nathan",
+                "Oiselle", 
+                "Patagonia", 
+                "Petzl",    
+                "Salomon",
+                "Saucony",
+                "Scott",
+                "Smith",    
+                "Suunto",
+                "Swiftwick",    
+                "The North Face",
+                "Topo Athletic",
+                "UltrAspire",    
+                "Ultimate Direction",
+                "Zensah"    
+                ];
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+        } );
+    </script>  
+    </head>
+    <body>
+        <div id="page">
+            <img class="logo" src="images/cascadia-run-co.png" alt="Cascadia Run Co" />
+        </div>  
+        <nav class="nav-container hidden hideNav">
+            <ul class="nav-list">
+                <li class="list-item"><a href="home.html"><i class="fa fa-home"></i></a></li>
+                <li class="list-item"><a href="products.html"><i class="fa fa-shopping-cart"></i></a></li>
+                <li class="list-item"><a href="about.html"><i class="fa fa-info-circle"></i></a></li>
+                <li class="list-item"><a href="contact.html"><i class="fa fa-paper-plane"></i></a></li>
+            </ul>
+        </nav>
+        <button class="btn-nav">
+            <div class="bar arrow-top-r"></div>
+            <div class="bar arrow-middle-r"></div>
+            <div class="bar arrow-bottom-r"></div>
+        </button>
+        <div class="ui-widget">
+            <label for="tags">Search: </label>
+            <input id="tags">
+        </div>
+        <div>
+            <img class="trails" src="images/pct.jpg" alt="Pacific Crest Trail" />
+            <img class="trails" src="images/mt-jefferson.jpg" alt="Jefferson" />
+            <img class="trails" src="images/mother-mountain-loop.jpg" alt="Rainier" />
+            <img class="trails" src="images/tiger.jpg" alt="Tiger Mountain" />
+        </div>
+        <footer>
+            <small>&copy; 2018, Erica Finch, All Rights Reserved</small>
+        </footer>
+    
+        <script>
+            
+            //side navigation jQuery plugin
+            $(window).load(function() {
+                $(".btn-nav").on("click tap", function() {
+                    $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
+                    $(this).toggleClass("animated");
+                });
+            });
+       
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-36251023-1']);
+                _gaq.push(['_setDomainName', 'jqueryscript.net']);
+                _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        </script>    
+    </body>
+</html>

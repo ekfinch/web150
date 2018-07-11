@@ -1,0 +1,79 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: #E5E4E2;
+  font-family: 'Roboto Mono';
+}
+
+.logo {
+    width: 35%;
+    float: right;
+}
+
+h2 {
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    color: #000;
+}
+
+#menu {
+    font-family: 'Roboto Mono';
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 150px;
+    padding-top: 200px;
+    padding-left: 244px;
+    list-style: none;
+    display: block;
+    border: none;
+    background-color: #E5E4E2;
+    outline: 0;
+}
+
+li.menu {
+    font-family: 'Roboto Mono';
+    border: none;
+    background-color: #E5E4E2;
+}
+
+p {
+    position: relative;
+    top: 65px;
+    left: 250px;
+    color: #000;
+}
+
+#maps {
+    padding-left: 250px;
+    padding-top: 50px;
+}
+
+.dark-blue {
+    color: #132484;
+}
+
+.dark-green {
+    color: #056623;
+}
+
+img.brands {
+    width: 30%;
+    padding-left: 220px;
+    padding-top: 50px;
+    padding-bottom: 5em;
+}
+
+img.shops {
+    width: 35%;
+    padding-top: 80px;
+    padding-left: 165px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: .75em;
+}
+

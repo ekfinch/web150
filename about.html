@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRC - About</title>
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/side-nav.css">
+        <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono|Roboto+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        //tabs using mouseover jQuery UI widget
+        $( function() {
+            $( "#tabs" ).tabs({
+                event: "mouseover"
+            });
+        } );
+    </script>
+    </head>
+    <body>
+        <div id="page">
+            <img class="logo" src="images/cascadia-run-co.png" alt="Cascadia Run Co" />
+        </div>  
+        
+    <nav class="nav-container hidden hideNav">
+            <ul class="nav-list">
+                <li class="list-item"><a href="home.html"><i class="fa fa-home"></i></a></li>
+                <li class="list-item"><a href="products.html"><i class="fa fa-shopping-cart"></i></a></li>
+                <li class="list-item"><a href="about.html"><i class="fa fa-info-circle"></i></a></li>
+                <li class="list-item"><a href="contact.html"><i class="fa fa-paper-plane"></i></a></li>
+            </ul>
+        </nav>
+        <button class="btn-nav">
+            <div class="bar arrow-top-r"></div>
+            <div class="bar arrow-middle-r"></div>
+            <div class="bar arrow-bottom-r"></div>
+        </button>
+    <section>
+        <h2>About Cascadia Running Company</h2>
+        <img class="direction" src="images/arrow.png" alt="Arrow" />
+        <div id="about">
+            <p>We are located in the heart of Issaquah, Washington. <br>Also known as "Trailhead City." <br>We are driven by community, and our love for wild places. <br> Our mission is to share that passion with our customers.</p>
+            <p>Hours of Operation:</p>
+            <p>Monday - Friday: 10am - 7pm <br>Saturday - Sunday: 11am - 6pm</p>
+            <p>Email: cascadiarunco@gmail.com <br>Phone: 206-555-1111</p>
+            <a href="#"><img src="images/facebook.png" class="social-media"></a>
+            <a href="#"><img src="images/instagram.png" class="social-media"></a>  
+            <a href="#"><img src="images/twitter.png" class="social-media"></a>    
+        </div>    
+    </section>
+    <h3>Races</h3>    
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Alpine Lakes 100</a></li>
+            <li><a href="#tabs-2">Cascadia Classic</a></li>
+            <li><a href="#tabs-3">Mt. Teneriffe Traverse</a></li>
+        </ul>
+        <div id="tabs-1">
+            <p>Alpine Lakes 100 is a hundred mile race in the stunning Alpine Lakes Wilderness. Runners will be treated to many grueling climbs, rewarding views, and a challenge like none other. With over 20,000 feet in elevation gain, this race is not for the faint of heart. All entrants must complete 8 hours of trail work, and must have completed a hundred mile race prior to AL100.</p>
+        </div>
+        <div id="tabs-2">
+            <p>Cascadia Classic is our signature race that started it all. Runners get to enjoy 50 miles through the awe-inspiring Norse Peak Wilderness. What makes this race a classic? Enjoy cooler temps, and the colors of fall as you explore gorgeous single track, and views of Rainier. This race sells out fast, so sign up soon!</p>
+        </div>
+        <div id="tabs-3">
+            <p>Mt. Teneriffe Traverse is the newest race in the Cascadia family. Runners will start at the Mt. Teneriffe trailhead, and climb up to the summit via the old trail. Runners will then traverse over to Mt. Si, and make their way back to Teneriffe. Runners will have several options after they complete their first traverse. They can continue back up Teneriffe, or head back in the opposite direction. Runners can also choose the distance they wish to complete, and how many loops they wish to run. This race is done in the true fat ass style, with minimal aid (but maximum fun). </p>
+        </div>
+    </div>    
+    <footer>
+        <small>&copy; 2018, Erica Finch, All Rights Reserved</small>
+    </footer>    
+    
+        <script>
+            
+            //side navigation jQuery plugin
+            $(window).load(function() {
+                $(".btn-nav").on("click tap", function() {
+                    $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
+                    $(this).toggleClass("animated");
+                });
+            });
+        
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-36251023-1']);
+                _gaq.push(['_setDomainName', 'jqueryscript.net']);
+                _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        </script>    
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRC - Products</title>
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/side-nav.css">
+    <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono|Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        //products menu jQuery UI widget
+        $( function() {
+            $( "#menu" ).menu();
+        } );
+    </script>  
+</head>
+<body>
+    <div id="page">
+        <img class="logo" src="images/cascadia-run-co.png" alt="Cascadia Run Co" />
+    </div>
+    <nav class="nav-container hidden hideNav">
+            <ul class="nav-list">
+                <li class="list-item"><a href="home.html"><i class="fa fa-home"></i></a></li>
+                <li class="list-item"><a href="products.html"><i class="fa fa-shopping-cart"></i></a></li>
+                <li class="list-item"><a href="about.html"><i class="fa fa-info-circle"></i></a></li>
+                <li class="list-item"><a href="contact.html"><i class="fa fa-paper-plane"></i></a></li>
+            </ul>
+        </nav>
+        <button class="btn-nav">
+            <div class="bar arrow-top-r"></div>
+            <div class="bar arrow-middle-r"></div>
+            <div class="bar arrow-bottom-r"></div>
+        </button>
+    <section>
+        <div>
+            <h2>Products</h2>
+                <ul id="menu">
+                    <li><div>Womens</div>
+                        <ul>    
+                            <li><div>Shoes</div>
+                        <ul>    
+                            <li><div>Trail</div></li>
+                            <li><div>Road</div></li>
+                        </ul>    
+                            <li><div>Clothing</div>
+                        <ul>
+                            <li><div>Shirts</div></li>
+                            <li><div>Shorts</div></li>
+                        </ul>
+                        </ul>        
+                            </li>    
+                    <li><div>Mens</div>
+                        <ul>    
+                            <li><div>Shoes</div>
+                        <ul>    
+                                <li><div>Trail</div></li>
+                                <li><div>Road</div></li>
+                        </ul>      
+                            <li><div>Clothing</div>
+                        <ul>    
+                                <li><div>Shirts</div></li>
+                                <li><div>Shorts</div></li>
+                        </ul>      
+                        </ul>
+                            </li>     
+                    <li><div>Headwear</div>
+                        <ul>    
+                                <li><div>Trucker Hats</div></li>
+                                <li><div>Beanies</div></li>
+                        </ul>
+                    </li>     
+                    <li><div>Accessories</div>
+                        <ul>
+                                <li><div>Gaiters</div></li>
+                                <li><div>Stickers</div></li>
+                        </ul>
+                    </li>
+            </ul>
+        </div>
+        <div id="maps">
+        <h3>Green Trails Maps</h3>
+            <ul>
+                <li id="one" class="dark-blue">Alpine Lakes West</li>
+                <li id="two" class="dark-blue">Mt. Baker</li>
+                <li id="three" class="dark-blue">Columbia Gorge West</li>
+                <li id="four" class="dark-blue">Mountain Loop Highway</li>
+                <li id="five" class="dark-green">Mt. Rainier - Wonderland</li>
+            </ul>
+        </div>    
+        <div id="brands">   
+            <img class="brands" src="images/brands.png" alt="Running Brands" />
+        </div>
+        </section>
+        <footer>
+            <small>&copy; 2018, Erica Finch, All Rights Reserved</small>
+        </footer>    
+        <script>
+            
+            //DOM manipulation #1
+            //used textContent to change Mountain Loop Highway to Mt Olympus in the Green Trails Maps list
+            function myFunction() {
+                document.getElementById("four").textContent = "Mt. Olympus";
+                
+            }
+            myFunction();
+            
+            //DOM Manipulation #2
+            //Getting An Element by Class Name
+            //find the items in the Green Trails Maps list with the class of dark-blue
+            var elements = document.getElementsByClassName('dark-blue');
+            //if 3 or more items are found in NodeList
+            if(elements.length > 1){
+                //select the second item from the list, Mt. Baker
+                var el = elements[1];
+                //change the value to the class of dark-green by using the className attribute
+                el.className = 'dark-green';
+            }
+            
+            //DOM Manipulation #3
+            //Adding An Element
+            //create a new element in the product list - sunglasses in the list of accessories
+            var newEl = document.createElement('li');
+            //create a text node
+            var newText = document.createTextNode('Sunglasses');
+            //attatch the new text node to the new element
+            newEl.appendChild(newText);
+            
+            //find the position to insert the new element
+            var position = document.getElementsByTagName('ul')[9];
+            
+            //insert the new element into its position
+            position.appendChild(newEl);
+        
+            
+            
+            //side navigation jQuery plugin
+            $(window).load(function() {
+                $(".btn-nav").on("click tap", function() {
+                    $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
+                    $(this).toggleClass("animated");
+                });
+            });
+        
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-36251023-1']);
+            _gaq.push(['_setDomainName', 'jqueryscript.net']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        </script>    
+ 
+</body>
+</html>
